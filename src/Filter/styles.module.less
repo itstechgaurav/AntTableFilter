@@ -1,0 +1,67 @@
+.AntTableFilterTrigger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none !important;
+  flex: none;
+  align-items: stretch;
+  align-self: stretch;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 25px;
+  justify-content: center;
+  transition: 0.3s background;
+
+  &:hover {
+    background: #e7e7e7 !important;
+
+    & path:nth-child(2) {
+      fill: #7e7e7e;
+    }
+  }
+
+  & > span {
+    align-self: center;
+  }
+
+  & path {
+    fill: #bfbfbf;
+    transition: 0.3s;
+  }
+}
+
+:global(.ant-table-cell) .AntTableFilterTrigger {
+  display: flex !important;
+}
+
+.AntTableFilterTriggerActive {
+  background: #e7e7e7 !important;
+
+  & path {
+    fill: #7e7e7e;
+  }
+}
+
+.AntTableFilterTriggerFiltered {
+  & path {
+    fill: dodgerblue;
+  }
+}
+
+.AntTableFilterPopOverTitle {
+  padding: 0.5rem 0;
+}
+
+.hidePopOverArrow :global(.ant-popover-arrow) {
+  display: none !important;
+}
+
+.AntTableFilterGroup {
+  margin-bottom: 10px;
+  margin-top: 0px !important;
+
+  .AntTableFilterGroupTitle {
+    margin-bottom: 5px;
+  }
+}
